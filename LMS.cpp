@@ -77,7 +77,69 @@ class Books:public Book{
     cout<<"enter the serial number of the book:";
     cin>>sno;
     int flag=0;
-
+    cout<<"S.Nn\t\tName\t\tAuthor\t\tAvailable Qty\t\tTotal Qty"<<endl;
+    for(int i=0;i<count;i++)
+    {
+      if(sno==theBooks[i].sNo)
+      {
+        cout<< theBooks[i].sNo <<"\t\t"
+                    << theBooks[i].bookName + "\t\t"
+                    << theBooks[i].authorName + "\t\t"
+                    << theBooks[i].bookQtyCopy + "\t\t"
+                    <<theBooks[i].bookqty;
+                    cout<<endl;
+        flag++;
+        return;
+      }
+    }
+    if(flag==0)
+    {
+      cout<<"No Book for Serial no."<<sno<<"found\n";
+    }
   }
+  //method 4
+  //to search by author name
+  void searchByAuthorName() {
+        cout << "\t\t\t\tSEARCH BY AUTHOR'S NAME" << endl;
+        cin.ignore(); // Clear input buffer
+
+        cout << "Enter Author Name: ";
+        string authorName;
+        getline(cin, authorName);
+
+        int flag = 0;
+
+        cout << "\nS.No\t\tName\t\tAuthor\t\tAvailable Qty\t\tTotal Qty" << endl;
+        for (int i = 0; i < count; i++) {
+            if (authorName == theBooks[i].authorName) {
+                cout << theBooks[i].sNo << "\t\t"
+                     << theBooks[i].bookName << "\t\t"
+                     << theBooks[i].authorName << "\t\t"
+                     << theBooks[i].bookQtyCopy << "\t\t"
+                     << theBooks[i].bookqty << endl;
+                flag++;
+            }
+        }
+
+        if (flag == 0)
+            cout << "No Books of " << authorName << " Found." << endl;
+    }
+    //method 5 display the books
+    void showAllBooks() {
+         cout<<"\t\t\t\tSHOWING ALL BOOKS\n";
+         cout<<
+            "S.No\t\tName\t\tAuthor\t\tAvailable Qty\t\tTotal Qty";
+ 
+        for (int i = 0; i < count; i++) {
+ 
+            cout<<
+                theBooks[i].sNo <<"\t\t"
+                <<theBooks[i].bookName << "\t\t"
+                << theBooks[i].authorName << "\t\t"
+                << theBooks[i].bookQtyCopy <<"\t\t"
+                << theBooks[i].bookqty<<endl;
+        }
+    }
+
   
 };
