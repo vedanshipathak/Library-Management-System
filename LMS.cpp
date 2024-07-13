@@ -140,6 +140,27 @@ class Books:public Book{
                 << theBooks[i].bookqty<<endl;
         }
     }
-
-  
+//method-6
+//to edit the book 
+void upgradeBookQty()
+{
+  cout<< "\t\t\t\tUPGRADE QUANTITY OF A BOOK\n";
+  cout<<"Enter Serial No of Book:";
+  cin>>sNo;
+   for (int i = 0; i < count; i++) {
+ 
+            if (sNo == theBooks[i].sNo) {
+ 
+                // Display message
+                cout<<
+                    "Enter No of Books to be Added:";
+                   int addingQty;
+                cin>> addingQty ;
+                theBooks[i].bookqty += addingQty;
+                theBooks[i].bookQtyCopy += addingQty;
+ 
+               return ;
+            }
+}
+}
 };
