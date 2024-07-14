@@ -163,4 +163,27 @@ void upgradeBookQty()
             }
 }
 }
+// Method 7
+    // To create menu
+     void dispMenu()
+    {
+ 
+        // Displaying menu
+        cout<<
+            "----------------------------------------------------------------------------------------------------------\n";
+        cout<<"Press 1 to Add new Book.\n";
+        cout<<"Press 0 to Exit Application.\n";
+        cout<<
+            "Press 2 to Upgrade Quantity of a Book.\n";
+        cout<<"Press 3 to Search a Book.\n";
+        cout<<"Press 4 to Show All Books.\n";
+        cout<<"Press 5 to Register Student.\n";
+       cout<<
+            "Press 6 to Show All Registered Students.\n";
+        cout<<"Press 7 to Check Out Book. \n";
+        cout<<"Press 8 to Check In Book\n";
+        cout<<
+            "-------------------------------------------------------------------------------------------------------\n";
+    }
+ 
 };
